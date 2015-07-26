@@ -1,0 +1,19 @@
+{
+    "name" : "poxiao",
+    "version" : "0.9.0",
+    "manifest_version":2,
+    "description" : "http://www.poxiao.com/",
+    "browser_action" : {
+        "default_icon":"icon.png",
+        "default_title" : "poxiao",
+        "default_popup" : "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://www.poxiao.com/*"],
+          "js": ["js/jquery-171-min.js", "js/myscript.js"],
+          "run_at": "document_end",  
+          "all_frames": true   
+        }
+    ]
+}
